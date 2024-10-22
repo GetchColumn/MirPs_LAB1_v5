@@ -208,10 +208,11 @@ int main() {
         ak_file.addString(str.c_str());
     }
 
-    // Поиск подстроки алгоритмом Ахо-Корасика
+    // Поиск подстроки алгоритмом Ахо-Корасика на данных из файла
+    const char* c_substr_file = substring.c_str();
     startTime = clock();
     ak_file.init();
-    vector<int> positionsAho = ak_file.search(substring.c_str());
+    vector<int> positionsAho = ak_file.search(c_substr_file);
     stopTime = clock();
     unsint AhoTime_file = stopTime - startTime; // время работы алгоритма Ахо-Корасика
 
@@ -235,10 +236,10 @@ int main() {
     }
 
     // Поиск подстроки алгоритмом Ахо-Корасика на сген данных
-    const char* c_substr = substring.c_str();
+    const char* c_substr_gen = substring.c_str();
     startTime = clock();
     ak_gen.init();
-    vector<int> positionsAho_gen = ak_gen.search(c_substr);
+    vector<int> positionsAho_gen = ak_gen.search(c_substr_gen);
     stopTime = clock();
     unsint AhoTime_gen = stopTime - startTime; // время работы алгоритма Ахо-Корасика
 

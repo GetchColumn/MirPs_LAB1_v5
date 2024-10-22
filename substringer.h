@@ -52,6 +52,7 @@ public:
         words.push_back(str);
     }
 
+    // сплошная магия
     void init() {
         queue<BorNode*> q;
         q.push(&root);
